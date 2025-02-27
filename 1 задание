@@ -1,1 +1,10 @@
 
+import pandas as pd
+df_excel = pd.read_excel('pandex.xlsx')
+line = int(input('введите координаты ячейки для поиска  (строчка): '))
+iloc = int(input('введите координаты ячейки для поиска  (столбец): '))
+line-=1
+print(f"столбец {iloc}:")
+print(f"Строка {line+1}:")
+print('вот значение данной ячейки')
+print(df_excel.iloc[line,iloc])
